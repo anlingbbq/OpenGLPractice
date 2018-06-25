@@ -1,0 +1,10 @@
+
+Debug
+.vs
+
+*.db
+*.tlog
+*.idb
+*.pdb
+*.tlog
+*.opendb

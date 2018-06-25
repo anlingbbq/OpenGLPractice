@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\skybox_1">
+      <UniqueIdentifier>{68134591-bc27-4738-83ef-c4c706cc1f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\skybox_2">
+      <UniqueIdentifier>{18a19803-e40c-4eef-970a-1667a9259e32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cubemaps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reflection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libraries\Includes\Minor\SkyBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\Minor\TextureLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Includes\Minor\Shape\NormalCube.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\Shader\skybox.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Libraries\Shader\skybox.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\skybox_1\back.jpg">
+      <Filter>Resource Files\skybox_1</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_1\bottom.jpg">
+      <Filter>Resource Files\skybox_1</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_1\front.jpg">
+      <Filter>Resource Files\skybox_1</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_1\left.jpg">
+      <Filter>Resource Files\skybox_1</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_1\right.jpg">
+      <Filter>Resource Files\skybox_1</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_1\top.jpg">
+      <Filter>Resource Files\skybox_1</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_2\back.bmp">
+      <Filter>Resource Files\skybox_2</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_2\bottom.bmp">
+      <Filter>Resource Files\skybox_2</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_2\front.bmp">
+      <Filter>Resource Files\skybox_2</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_2\left.bmp">
+      <Filter>Resource Files\skybox_2</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_2\right.bmp">
+      <Filter>Resource Files\skybox_2</Filter>
+    </Image>
+    <Image Include="..\Resources\skybox_2\top.bmp">
+      <Filter>Resource Files\skybox_2</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
