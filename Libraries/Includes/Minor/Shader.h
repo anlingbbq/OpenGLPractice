@@ -40,8 +40,10 @@ namespace minor
 
 				try
 				{
-					vShaderFile.open(_directory + vertexData);
-					fShaderFile.open(_directory + fragmentData);
+					_vsFileName = _directory + vertexData;
+					_fsFileName = _directory + fragmentData;
+					vShaderFile.open(_vsFileName);
+					fShaderFile.open(_fsFileName);
 
 					std::stringstream vShaderStream, fShaderStream;
 
@@ -143,7 +145,8 @@ namespace minor
 
 				try
 				{
-					gShaderFile.open(_directory + geometryData);
+					_gsFileName = _directory + geometryData;
+					gShaderFile.open(_gsFileName);
 					std::stringstream gShaderStream;
 					gShaderStream << gShaderFile.rdbuf();
 
@@ -178,6 +181,9 @@ namespace minor
 		}
 
 	private:
+		std::string _vsFileName;
+		std::string _fsFileName;
+		std::string _gsFileName;
 		std::string _directory = "../Resources/Shader/";
 		void checkCompileErrors(unsigned int shader, std::string type)
 		{
@@ -188,8 +194,10 @@ namespace minor
 				glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
 				if (!success)
 				{
+					std::string fileName;
+					fileName = type == "vertex" ? _vsFileName : type == "fragment" ? _fsFileName : _gsFileName;
 					glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-					printf("%s shader compilation error: \n%s", type.c_str(), infoLog);
+					printf("%s shader compilation error: \npath:%s\n%s\n", type.c_str(), fileName.c_str(), infoLog);
 				}
 			}
 			else
