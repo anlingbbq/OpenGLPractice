@@ -4,6 +4,7 @@
 #include <Minor/Shader.h>
 #include <Minor/ObserveCamera.h>
 #include <iostream>
+#include <thread>
 
 constexpr int getConst() {
 	return 2;
@@ -24,6 +25,11 @@ void MyPrint(A... a)
 	DummyWrapper(pr(a)...);
 }
 
+void thread_task()
+{
+	 std::cout << "hello thread" << std::endl;
+}
+
 using namespace minor;
 class Temp2 : public Application
 {
@@ -37,14 +43,19 @@ public:
 		glfwWindowHint(GLFW_SAMPLES, 4);
 	}
 	
+	void thread_task()
+	{
+		std::cout << "hello thread" << std::endl;
+	}
+
 	void startup()
 	{
 		Application::startup();
 
-		//printf("arr num %d", arr[0]);
-		MyPrint("1, ", "2, ", "3");
+		//std::thread t(thread_task);
+		//t.join();
 	}
-	
+
 	void render()
 	{
 		Application::render();
@@ -57,4 +68,4 @@ public:
 private:
 };
 
-DEBUG_MAIN(Temp2);
+//DEBUG_MAIN(Temp2);

@@ -55,15 +55,15 @@ namespace minor
 	class ColorCube : public ShapeBase
 	{
 	public:
-		static ColorCube* create(glm::vec3 color, GLchar* vs, GLchar* fs)
+		static ColorCube* create(glm::vec3 color, std::string vs, std::string fs)
 		{
-			ColorCube* cube = ColorCube::create(vs, fs);
+			ColorCube* cube = ColorCube::create(vs.c_str(), fs.c_str());
 			cube->setColor(color);
 
 			return cube;
 		}
 
-		static ColorCube* create(GLchar* vs, GLchar* fs, DataType type = FILE)
+		static ColorCube* create(const GLchar* vs, const GLchar* fs, DataType type = FILE)
 		{
 			ColorCube* cube = new ColorCube(cube_vertices, sizeof(cube_vertices));
 			cube->_shader = new Shader(vs, fs, type);

@@ -31,16 +31,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Libraries\Shader\common.vs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Libraries\Shader\modelDiffuse.fs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Libraries\Shader\modelDiffuse.vs">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="..\Libraries\Shader\pointLightMap2.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\common.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\modelDiffuse.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\modelDiffuse.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

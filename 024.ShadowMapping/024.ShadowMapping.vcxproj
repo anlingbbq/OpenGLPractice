@@ -119,6 +119,12 @@
     <ClCompile Include="RenderDepthMap.cpp" />
     <ClCompile Include="RenderShadow.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shader\debugQuad.fs" />
+    <None Include="..\Resources\Shader\debugQuad.vs" />
+    <None Include="..\Resources\Shader\shadowMappingDepth.fs" />
+    <None Include="..\Resources\Shader\shadowMappingDepth.vs" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

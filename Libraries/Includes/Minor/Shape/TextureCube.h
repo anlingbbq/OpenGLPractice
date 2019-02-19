@@ -73,7 +73,7 @@ namespace minor
 		"in vec2 TexCoord;								\n"
 		"void main()									\n"
 		"{												\n"
-		"	fragColor = texture(ourTexture, TexCoord);	\n"
+		"	fragColor = texture(ourTexture, TexCoord);\n"
 		"}												\n"
 	};
 

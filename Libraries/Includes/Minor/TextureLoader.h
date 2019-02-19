@@ -21,9 +21,12 @@ namespace minor
 			return inst;
 		}
 
-		int LoadTexture2D(std::string filename, bool gammaCorrection = false)
+		int LoadTexture2D(std::string filename, bool gammaCorrection = false, std::string directory = "")
 		{
-			filename = _directory + filename;
+			if (directory != "")
+				filename = directory + filename;
+			else
+				filename = _directory + filename;
 
 			unsigned int textureID;
 			glGenTextures(1, &textureID);

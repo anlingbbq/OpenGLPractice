@@ -36,4 +36,4 @@ private:
 	ColorRectangle* _rect;
 };
 
-DEBUG_MAIN(Transform2D);
+//DEBUG_MAIN(Transform2D);

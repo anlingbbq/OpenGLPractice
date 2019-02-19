@@ -14,7 +14,7 @@ namespace minor
 		template <typename T>
 		T* GetComponent()
 		{
-			return gameObject->GetComponent<T>();
+			//return gameObject->GetComponent<T>();
 		}
 
 		virtual void destory()

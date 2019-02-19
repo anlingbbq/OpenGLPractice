@@ -20,11 +20,11 @@ public:
 	{
 		Application::startup();
 
-		_lamp = ColorCube::create(glm::vec3(1, 1, 1), "../Libraries/Shader/normal.vs", "../Libraries/Shader/constant.fs");
+		_lamp = ColorCube::create(glm::vec3(1, 1, 1), "normal.vs", "constant.fs");
 		_lamp->setPosition(_lampPos);
 		_lamp->setScale(glm::vec3(0.2f));
 
-		_cube = ColorCube::create(glm::vec3(1.0f, 0.5f, 0.31f), "../Libraries/Shader/normal.vs", "../Libraries/Shader/phongMaterial.fs");
+		_cube = ColorCube::create(glm::vec3(1.0f, 0.5f, 0.31f), "normal.vs", "phongMaterial.fs");
 		_cube->getShader()->setVec3("lightColor", _lamp->getColor());
 
 		//_cube->getShader()->setVec3("material.ambient", glm::vec3(1.0f, 0.5f, 0.31f));
@@ -68,4 +68,4 @@ private:
 	const glm::vec3 _lampPos = glm::vec3(1.2f, 1.0f, 2.0f);
 };
 
-//DEBUG_MAIN(UseMaterials);
+DEBUG_MAIN(UseMaterials);

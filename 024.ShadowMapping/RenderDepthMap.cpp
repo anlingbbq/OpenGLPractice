@@ -21,8 +21,8 @@ public:
 	{
 		Application::startup();
 		
-		_simpleDepthShader = new Shader("../Libraries/Shader/shadowMapping.vs", "../Libraries/Shader/shadowMapping.fs");
-		_debugDepthQuadShader = new Shader("../Libraries/Shader/debugQuad.vs", "../Libraries/Shader/debugQuad.fs");
+		_simpleDepthShader = new Shader("shadowMapping.vs", "shadowMapping.fs");
+		_debugDepthQuadShader = new Shader("debugQuad.vs", "debugQuad.fs");
 
 		// plane VAO
 		glGenVertexArrays(1, &_planeVAO);

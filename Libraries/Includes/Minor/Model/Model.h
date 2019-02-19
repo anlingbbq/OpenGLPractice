@@ -171,7 +171,7 @@ namespace minor
 				if (!skip)
 				{
 					Texture texture;
-					texture.id = TextureLoader::Inst()->LoadTexture2D(str.C_Str(), directory);
+					texture.id = TextureLoader::Inst()->LoadTexture2D(str.C_Str(), false, directory);
 					//string filename = string(str.C_Str());
 					//filename = directory + "/" + filename;
 					//texture.id = TextureManager::Inst()->LoadTexture2D(filename);

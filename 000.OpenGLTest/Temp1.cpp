@@ -18,7 +18,16 @@
 	printf("\n");									\
 }													\
 
-#define LOG(...) printf("...")
+#define CALLFUNCTION_LOG(...) printf(__VA_ARGS__);	\
+
+#define CALLFUNCTION(NeedCall, Func, ...)			\
+	CALLFUNCTION_##NeedCall(Func(__VA_ARGS__))
+#define CALLFUNCTION_false(Func)
+#define CALLFUNCTION_true(Func) Func
+
+
+
+//#define LOG(...) printf("...")
 
 using namespace std;
 class test1
@@ -66,17 +75,19 @@ public:
 		Application::startup();
 		
 		string str = "test";
-		funcTest = [str]() 
-		{ 
-			printf(str.c_str()); 
-		};
-		funcTest();
+		//funcTest = [str]() 
+		//{ 
+		//	printf(str.c_str()); 
+		//};
+		//funcTest();
 
 		//printf("\n%d", sizeof(bool)); // 1
 
 		//PRINT_STR(2);
 		//LOG("x = %d", 2);
 		//ERROR("x = 2");
+
+		CALLFUNCTION(true, CALLFUNCTION_LOG, "x = %d", 200);
 	}
 	
 	void render()
@@ -91,4 +102,4 @@ public:
 private:
 };
 
-//DEBUG_MAIN(Temp1);
+DEBUG_MAIN(Temp1);

@@ -93,4 +93,4 @@ private:
 	unsigned int _frontTexId;
 };
 
-//DEBUG_MAIN(GLFrontFacing);
+DEBUG_MAIN(GLFrontFacing);

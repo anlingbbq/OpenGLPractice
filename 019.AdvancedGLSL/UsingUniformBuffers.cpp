@@ -79,4 +79,4 @@ private:
 	ColorCube* _blueCube;
 };
 
-DEBUG_MAIN(UsingUniformBuffers);
+//DEBUG_MAIN(UsingUniformBuffers);

@@ -59,4 +59,4 @@ private:
 	const glm::vec3 _lampPos = glm::vec3(1.2f, 1.0f, 2.0f);
 };
 
-DEBUG_MAIN(Specular);
+//DEBUG_MAIN(Specular);

@@ -1,7 +1,7 @@
 //#define STB_IMAGE_IMPLEMENTATION
 #include <Minor/Minor.h>
 #include <Minor/Shader.h>
-
+#include <Minor/Shape/ColorCube.h>
 #include <Minor/Shape/TextureCube.h>
 
 using namespace minor;
@@ -38,4 +38,4 @@ private:
 	TextureCube* _texCube;
 };
 
-//DEBUG_MAIN(Transform3D)
+DEBUG_MAIN(Transform3D)

@@ -26,7 +26,7 @@ public:
 		_map[name] = fun;
 	}
 
-	static Reflector& Reflector::Instance()
+	static Reflector& Instance()
 	{
 		static Reflector _reflector;
 		return _reflector;

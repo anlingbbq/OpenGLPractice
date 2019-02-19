@@ -15,25 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RenderDepthMap.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="SingleNormalMapping.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="RenderShadow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Resources\Shader\debugQuad.fs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Resources\Shader\debugQuad.vs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Resources\Shader\shadowMappingDepth.fs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Resources\Shader\shadowMappingDepth.vs">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
