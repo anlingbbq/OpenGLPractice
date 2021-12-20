@@ -2,7 +2,6 @@
 #define __ColorCube_H__
 
 #include "ShapeBase.h"
-#include <Minor/TextureManager.h>
 #include <Minor/Minor.h>
 #include <Minor/Base/GameObject.h>
 

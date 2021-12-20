@@ -1,7 +1,7 @@
 #include <Minor/Minor.h>
 #include <Minor/Shader.h>
 #include "Rectangle.h"
-#include <Minor/TextureManager.h>
+#include <Minor/TextureLoader.h>
 
 using namespace minor;
 class MixTexture : public Application
@@ -25,14 +25,14 @@ public:
 		glEnableVertexAttribArray(1);
 		_rect->unbind();
 
-		TextureManager::Inst()->LoadTexture("../Resources/wall.jpg", wall_id, GL_BGR, GL_RGB);
+		wall_id = TextureLoader::Inst()->LoadTexture2D("wall.jpg");
 		glGenerateMipmap(GL_TEXTURE_2D);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-		TextureManager::Inst()->LoadTexture("../Resources/awesomeface.png", awesome_id, GL_BGRA, GL_RGB);
+		awesome_id = TextureLoader::Inst()->LoadTexture2D("awesomeface.png");
 		glGenerateMipmap(GL_TEXTURE_2D);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -47,9 +47,9 @@ public:
 	void render()
 	{
 		glActiveTexture(GL_TEXTURE0);
-		TextureManager::Inst()->BindTexture(wall_id);
+		glBindTexture(GL_TEXTURE_2D, wall_id);
 		glActiveTexture(GL_TEXTURE1);
-		TextureManager::Inst()->BindTexture(awesome_id);
+		glBindTexture(GL_TEXTURE_2D, awesome_id);
 		
 		_shader->use();
 
@@ -61,7 +61,6 @@ public:
 	{
 		_rect->clear();
 		delete _shader;
-		TextureManager::Inst()->UnloadAllTextures();
 	}
 private:
 	minor::Rectangle* _rect;

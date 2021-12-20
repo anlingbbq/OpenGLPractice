@@ -2,7 +2,7 @@
 #define __LightingMapCube_H__
 
 #include "ShapeBase.h"
-#include <Minor/TextureManager.h>
+#include <Minor/TextureLoader.h>
 #include <Minor/Base/GameObject.h>
 
 namespace minor
@@ -96,7 +96,7 @@ namespace minor
 
 		void bindTexture(const std::string texPath)
 		{
-			TextureManager::Inst()->LoadTexture(texPath.c_str(), _textureId, GL_BGRA, GL_RGB);
+			_textureId = TextureLoader::Inst()->LoadTexture2D(texPath);
 			glGenerateMipmap(GL_TEXTURE_2D);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -106,7 +106,7 @@ namespace minor
 
 		void bindMap(const std::string mapPath)
 		{
-			TextureManager::Inst()->LoadTexture(mapPath.c_str(), _mapId, GL_BGRA, GL_RGB);
+			_mapId = TextureLoader::Inst()->LoadTexture2D(mapPath);
 			glGenerateMipmap(GL_TEXTURE_2D);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -135,10 +135,10 @@ namespace minor
 			changeModel();
 
 			glActiveTexture(GL_TEXTURE0);
-			TextureManager::Inst()->BindTexture(_textureId);
+			glBindTexture(GL_TEXTURE_2D, _textureId);
 
 			glActiveTexture(GL_TEXTURE1);
-			TextureManager::Inst()->BindTexture(_mapId);
+			glBindTexture(GL_TEXTURE_2D, _mapId);
 
 			glBindVertexArray(_vao);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -152,8 +152,6 @@ namespace minor
 			glDeleteVertexArrays(1, &_vao);
 			glDeleteBuffers(1, &_vbo);
 
-			TextureManager::Inst()->UnloadTexture(_textureId);
-			TextureManager::Inst()->UnloadTexture(_mapId);
 			delete _shader;
 			delete this;
 		}

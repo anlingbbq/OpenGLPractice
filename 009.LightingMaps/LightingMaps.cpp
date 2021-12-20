@@ -1,3 +1,4 @@
+#define STB_IMAGE_IMPLEMENTATION
 #include <Minor/Minor.h>
 #include <Minor/Shader.h>
 #include <Minor/ObserveCamera.h>

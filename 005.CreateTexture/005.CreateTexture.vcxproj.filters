@@ -15,16 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CreateTexture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CreateTextureByStb.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MixTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
+    <ClCompile Include="CreateTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

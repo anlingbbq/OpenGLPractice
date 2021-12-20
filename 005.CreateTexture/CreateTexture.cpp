@@ -1,7 +1,8 @@
+#define STB_IMAGE_IMPLEMENTATION
 #include <Minor/Minor.h>
 #include <Minor/Shader.h>
 #include "Rectangle.h"
-#include <FreeImage/FreeImage.h>
+#include <Minor/TextureLoader.h>
 
 using namespace minor;
 class CreateTexture : public Application
@@ -37,15 +38,7 @@ public:
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-		FreeImage_Initialise();
-		FIBITMAP* image = FreeImage_Load(FIF_JPEG, "../Resources/wall.jpg");
-		int width = FreeImage_GetWidth(image);
-		int height = FreeImage_GetHeight(image);
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, FreeImage_GetBits(image));
-		glGenerateMipmap(GL_TEXTURE_2D);
-		glBindTexture(GL_TEXTURE_2D, 0);
-
-		FreeImage_Unload(image);
+		_texture = TextureLoader::Inst()->LoadTexture2D("wall.jpg");
 	}
 	
 	void render()
@@ -82,4 +75,4 @@ private:
 	minor::Rectangle* _rect;
 };
 
-//DEBUG_MAIN(CreateTexture);
+DEBUG_MAIN(CreateTexture);
