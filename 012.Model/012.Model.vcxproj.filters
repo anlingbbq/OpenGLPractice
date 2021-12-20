@@ -26,9 +26,6 @@
     <ClCompile Include="LoadModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Libraries\Shader\pointLightMap2.fs">

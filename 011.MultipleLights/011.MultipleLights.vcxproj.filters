@@ -18,6 +18,9 @@
     <ClCompile Include="MultipleLights.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Libraries\Includes\Minor\Materials\MutipleLightingMaterial.h">
