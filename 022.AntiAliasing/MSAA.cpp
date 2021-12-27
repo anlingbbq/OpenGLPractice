@@ -7,13 +7,13 @@
 #include <Minor/Shape/TextureCube.h>
 
 using namespace minor;
-class AntiAliasing : public Application
+class MSAA : public Application
 {
 public:
 	void init()
 	{
 		Application::init();
-		_info.title = "AntiAliasing";
+		_info.title = "MSAA";
 		_camera = ObserveCamera::create(_info.width, _info.height);
 
 		glfwWindowHint(GLFW_SAMPLES, 4);
@@ -23,16 +23,18 @@ public:
 	{
 		Application::startup();
 
-		//_cube = ColorCube::create(glm::vec3(0, 1, 0), "normal.vs", "constant.fs");
-		_texCube = TextureCube::create("box.png");
+		_cube = ColorCube::create(glm::vec3(0, 1, 0), "normal.vs", "constant.fs");
+		//_texCube = TextureCube::create("box.png");
+		glm::quat r1 = _cube->setRotate(45, glm::vec3(1, 0, 0));
+		glm::quat r2 = _cube->setRotate(45, glm::vec3(0, 1, 0));
+		_cube->setRotate(r1, r2);
 	}
 	
 	void render()
 	{
 		Application::render();
 
-		//_cube->drawShape();
-		_texCube->drawShape();
+		_cube->drawShape();
 	}
 
 	void shutdown()
@@ -40,8 +42,7 @@ public:
 		Application::shutdown();
 	}
 private:
-	ColorCube* _cube;
-	TextureCube* _texCube;
+	ShapeBase* _cube;
 };
 
-DEBUG_MAIN(AntiAliasing);
+//DEBUG_MAIN(MSAA);

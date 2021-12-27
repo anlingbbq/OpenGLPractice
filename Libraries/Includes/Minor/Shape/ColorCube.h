@@ -54,6 +54,14 @@ namespace minor
 	class ColorCube : public ShapeBase
 	{
 	public:
+		static ColorCube* create(glm::vec3 color)
+		{
+			ColorCube* cube = ColorCube::create("normal.vs", "constant.fs");
+			cube->setColor(color);
+
+			return cube;
+		}
+		
 		static ColorCube* create(glm::vec3 color, std::string vs, std::string fs)
 		{
 			ColorCube* cube = ColorCube::create(vs.c_str(), fs.c_str());

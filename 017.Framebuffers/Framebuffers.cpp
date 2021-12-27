@@ -6,7 +6,7 @@
 #include <Minor/Shape/TexturePlane.h>
 #include <Minor/Materials/Kernel3x3Material.h>
 
-#define UseKernel true
+#define UseKernel false
 
 using namespace minor;
 class Framebuffers : public Application
@@ -137,7 +137,7 @@ public:
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		// disable depth test so screen-space quad isn't discard due to depth test
 		glDisable(GL_DEPTH_TEST);
-		// clear all relevant buffers, it's not really necessery
+		// clear all relevant buffers, it's not really necessary
 		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 

@@ -35,5 +35,11 @@
     <None Include="..\Resources\Shader\shadowMappingDepth.vs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\Resources\Shader\renderShadow.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\renderShadow.vs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

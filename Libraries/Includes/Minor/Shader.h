@@ -58,7 +58,7 @@ namespace minor
 				}
 				catch (std::ifstream::failure e)
 				{
-					printf("shader error: file not succesfully read");
+					printf("shader error: file not successfully read\n%s\n%s\n", _vsFileName.c_str(), _fsFileName.c_str());
 				}
 
 				vertexData = vertexCode.c_str();
@@ -155,7 +155,7 @@ namespace minor
 				}
 				catch (std::ifstream::failure e)
 				{
-					printf("shader error: file not succesfully read");
+					printf("shader error: file not successfully read");
 				}
 				geometryData = geometryCode.c_str();
 				CreateGeometryShader(geometryData);

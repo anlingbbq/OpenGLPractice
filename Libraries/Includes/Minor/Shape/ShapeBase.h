@@ -72,20 +72,27 @@ namespace minor
 			_changeTrans = true;
 		}
 
+		void setScale(float scale)
+		{
+			_scale = glm::vec3(scale, scale, scale);
+			_changeTrans = true;
+		}
+
 		glm::vec3 getScale()
 		{
 			return _scale;
 		}
 
-		void setRotate(float angle, glm::vec3 axis)
+		glm::quat setRotate(float angle, glm::vec3 axis)
 		{
 			_rotate = _orgRotate = glm::angleAxis(glm::radians(angle), axis);
 			_changeTrans = true;
+			return _rotate;
 		}
 
-		glm::quat addRotate(float angle, glm::vec3 axis)
+		glm::quat setRotate(glm::quat r1, glm::quat r2)
 		{
-			_rotate = _orgRotate * glm::angleAxis(glm::radians(angle), axis);
+			_rotate = r1 * r2;
 			_changeTrans = true;
 			return _rotate;
 		}

@@ -24,7 +24,8 @@ public:
 	
 	void render()
 	{
-		_rect->addRotate(curTime * 50.0f, glm::vec3(0.0f, 0.0f, 1.0f));
+		Application::render();
+		_rect->setRotate(curTime * 50.0f, glm::vec3(0.0f, 0.0f, 1.0f));
 		_rect->drawShape();
 	}
 

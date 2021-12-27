@@ -26,6 +26,7 @@ public:
 	
 	void render()
 	{
+		Application::render();
 		_texCube->setRotate(curTime * 20.0f, glm::vec3(0.5f, 1.0f, 0.0f));
 		_texCube->drawShape();
 	}

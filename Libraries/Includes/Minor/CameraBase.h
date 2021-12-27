@@ -87,6 +87,11 @@ namespace minor
 			return _zfar;
 		}
 
+		float getFOV()
+		{
+			return _fov;
+		}
+
 		glm::vec3 getPosition()
 		{
 			return _pos;
@@ -120,7 +125,7 @@ namespace minor
 		float _znear = 0.1f;
 		float _zfar = 100.0f;
 
-		// ±êÊ¶ÉãÏñ»ú±ä»¯
+		// æ ‡è¯†æ‘„åƒæœºå˜åŒ–
 		bool _changeTrans = true;
 	};
 };

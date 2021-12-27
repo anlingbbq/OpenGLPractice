@@ -34,7 +34,7 @@ namespace minor
 
 			if (!glfwInit())
 			{
-				printf("Faild to initialize GLEW\n");
+				printf("Faild to initialize GLFW\n");
 				return;
 			}
 
