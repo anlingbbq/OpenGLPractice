@@ -14,6 +14,7 @@ public:
 		_info.width = 1280;
 		_info.height = 720;
 		_camera = ObserveCamera::create(_info.width, _info.height);
+		glfwWindowHint(GLFW_SAMPLES, 4);
 	}
 
 	void startup()
@@ -64,8 +65,10 @@ public:
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, _shadowMapWidth, _shadowMapHeight, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+		GLfloat borderColor[] = { 1,0, 1.0, 1.0, 1.0 };
+		glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
 		// attach depth texture as FBO's depth buffer
 		glBindFramebuffer(GL_FRAMEBUFFER, _depthMapFBO);
 		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, _depthMap, 0);
@@ -102,13 +105,15 @@ public:
 		lightSpaceMatrix = lightProjection * lightView;
 		_simpleDepthShader->use();
 		_simpleDepthShader->setMat4("lightSpaceMatrix", lightSpaceMatrix);
-
 		glViewport(0, 0, _shadowMapWidth, _shadowMapHeight);
 		glBindFramebuffer(GL_FRAMEBUFFER, _depthMapFBO);
 		glClear(GL_DEPTH_BUFFER_BIT);
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, _woodTex);
+		//glEnable(GL_CULL_FACE);
+		//glCullFace(GL_FRONT);
 		renderScene(_simpleDepthShader);
+		//glDisable(GL_CULL_FACE);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
 		// reset viewport

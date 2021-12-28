@@ -15,16 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Libraries\Includes\Minor\CameraBase.h">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="UseCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Libraries\Includes\Minor\CameraBase.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\Libraries\Includes\Minor\ObserveCamera.h">
-      <Filter>Header Files</Filter>
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
