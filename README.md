@@ -75,4 +75,9 @@
 ![](https://github.com/anlingbbq/OpenGLPractice/blob/master/Demonstrate/021.Instancing-AsteroidField1.png)
 ![](https://github.com/anlingbbq/OpenGLPractice/blob/master/Demonstrate/021.Instancing-AsteroidField2.png)
 
+### 022.ShadowMapping
+<br>平行光</br>
+![](https://github.com/anlingbbq/OpenGLPractice/blob/master/Demonstrate/022.ShadowMapping.png)
+<br>点光源</br>
+![](https://github.com/anlingbbq/OpenGLPractice/blob/master/Demonstrate/022.PointShadows.png)
 
