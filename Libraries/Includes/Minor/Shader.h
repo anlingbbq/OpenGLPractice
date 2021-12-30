@@ -71,6 +71,12 @@ namespace minor
 				create(vertexData.c_str(), fragmentData.c_str());
 			}
 		}
+		Shader(std::string vertexData, std::string fragmentData, std::string geometryData, DataType type = FILE)
+		{
+			new (this)Shader(vertexData, fragmentData, type);
+			LoadGeometryShader(geometryData, type);
+		}
+		
 		void create(const GLchar* vertexData, const GLchar* fragmentData)
 		{
 			unsigned int vertex, fragment;
@@ -134,7 +140,7 @@ namespace minor
 			glUniformMatrix4fv(glGetUniformLocation(id, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 		}
 
-		void LoadGeometryShader(const char* geometryData, DataType type = FILE)
+		void LoadGeometryShader(std::string geometryData, DataType type = FILE)
 		{
 			if (type == FILE)
 			{
@@ -158,11 +164,11 @@ namespace minor
 					printf("shader error: file not successfully read");
 				}
 				geometryData = geometryCode.c_str();
-				CreateGeometryShader(geometryData);
+				CreateGeometryShader(geometryData.c_str());
 			}
 			else
 			{
-				CreateGeometryShader(geometryData);
+				CreateGeometryShader(geometryData.c_str());
 			}
 		}
 		void CreateGeometryShader(const char* geometryData)

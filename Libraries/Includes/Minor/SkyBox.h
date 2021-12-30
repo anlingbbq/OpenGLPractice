@@ -77,6 +77,20 @@ namespace minor
 			_shader->setInt("skybox", 0);
 		};
 
+		static SkyBox* create()
+		{
+			std::vector<std::string> faces
+			{
+				"skybox_" + std::to_string(2) + "/right.bmp",
+				"skybox_" + std::to_string(2) + "/left.bmp",
+				"skybox_" + std::to_string(2) + "/top.bmp",
+				"skybox_" + std::to_string(2) + "/bottom.bmp",
+				"skybox_" + std::to_string(2) + "/front.bmp",
+				"skybox_" + std::to_string(2) + "/back.bmp",
+			};
+			return SkyBox::create(faces);
+		}
+
 		static SkyBox* create(std::vector<std::string> faces)
 		{
 			SkyBox* skyBox = new SkyBox(faces);
