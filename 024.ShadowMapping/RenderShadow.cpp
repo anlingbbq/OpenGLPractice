@@ -265,4 +265,4 @@ private:
 	Shader* _simpleDepthShader;
 };
 
-DEBUG_MAIN(RenderShadow);
+//DEBUG_MAIN(RenderShadow);

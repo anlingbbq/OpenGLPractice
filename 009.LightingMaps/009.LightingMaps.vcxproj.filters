@@ -18,6 +18,9 @@
     <ClCompile Include="LightingMaps.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Libraries\Includes\Minor\Shape\LightingMapCube.h">
@@ -26,5 +29,9 @@
     <ClInclude Include="..\Libraries\Includes\Minor\Materials\LightingMapMaterial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Libraries\Shader\lightingMaps.fs" />
+    <None Include="..\Libraries\Shader\texture.vs" />
   </ItemGroup>
 </Project>

@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MSAA.cpp">
+    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OffScreenMSAA.cpp">
+    <ClCompile Include="AntiAliasing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
