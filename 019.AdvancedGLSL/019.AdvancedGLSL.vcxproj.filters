@@ -27,9 +27,6 @@
     <ClCompile Include="UsingUniformBuffers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Resources\marble.jpg">

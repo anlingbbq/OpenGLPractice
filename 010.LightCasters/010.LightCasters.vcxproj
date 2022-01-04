@@ -116,7 +116,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Libraries\Includes\Minor\TextureManager.cpp" />
     <ClCompile Include="DirectionLights.cpp" />
     <ClCompile Include="PointLights.cpp" />
     <ClCompile Include="SpotLights.cpp" />

@@ -289,4 +289,4 @@ private:
 	bool shadowsKeyPressed = false;
 };
 
-DEBUG_MAIN(RenderPointShadow);
+//DEBUG_MAIN(RenderPointShadow);

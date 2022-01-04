@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="PBRLighting.cpp" />
     <ClCompile Include="RenderDepthMap.cpp" />
     <ClCompile Include="RenderPointShadow.cpp" />
     <ClCompile Include="RenderShadow.cpp" />

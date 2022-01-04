@@ -5,7 +5,6 @@
 #include "Shader.h"
 #include <vector>
 #include "TextureLoader.h"
-//#include "TextureManager.h"
 #include "Minor.h"
 
 namespace minor
@@ -77,16 +76,16 @@ namespace minor
 			_shader->setInt("skybox", 0);
 		};
 
-		static SkyBox* create()
+		static SkyBox* create(int index = 1)
 		{
 			std::vector<std::string> faces
 			{
-				"skybox_" + std::to_string(2) + "/right.bmp",
-				"skybox_" + std::to_string(2) + "/left.bmp",
-				"skybox_" + std::to_string(2) + "/top.bmp",
-				"skybox_" + std::to_string(2) + "/bottom.bmp",
-				"skybox_" + std::to_string(2) + "/front.bmp",
-				"skybox_" + std::to_string(2) + "/back.bmp",
+				"skybox_" + std::to_string(index) + "/right.jpg",
+				"skybox_" + std::to_string(index) + "/left.jpg",
+				"skybox_" + std::to_string(index) + "/top.jpg",
+				"skybox_" + std::to_string(index) + "/bottom.jpg",
+				"skybox_" + std::to_string(index) + "/front.jpg",
+				"skybox_" + std::to_string(index) + "/back.jpg",
 			};
 			return SkyBox::create(faces);
 		}
