@@ -123,6 +123,12 @@
   <ItemGroup>
     <ClCompile Include="HDR.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shader\hdr.fs" />
+    <None Include="..\Resources\Shader\hdr.vs" />
+    <None Include="..\Resources\Shader\hdrLighting.fs" />
+    <None Include="..\Resources\Shader\hdrLighting.vs" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
