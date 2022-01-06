@@ -33,7 +33,7 @@ public:
         normal = TextureLoader::Inst()->LoadTexture2D("pbr/rusted_iron/normal.png");
         metallic = TextureLoader::Inst()->LoadTexture2D("pbr/rusted_iron/metallic.png");
         roughness = TextureLoader::Inst()->LoadTexture2D("pbr/rusted_iron/roughness.png");
-        //ao = TextureLoader::Inst()->LoadTexture2D("pbr/rusted_iron/ao.png");
+        ao = TextureLoader::Inst()->LoadTexture2D("pbr/rusted_iron/ao.png");
     }
 
     void render()
@@ -53,9 +53,9 @@ public:
         glBindTexture(GL_TEXTURE_2D, metallic);
         glActiveTexture(GL_TEXTURE3);
         glBindTexture(GL_TEXTURE_2D, roughness);
-        //glActiveTexture(GL_TEXTURE4);
-        //glBindTexture(GL_TEXTURE_2D, ao);
-
+        glActiveTexture(GL_TEXTURE4);
+        glBindTexture(GL_TEXTURE_2D, ao);
+        
         // render rows*column number of spheres with material properties defined by textures (they all have the same material properties)
         glm::mat4 model = glm::mat4(1.0f);
         for (int row = 0; row < nrRows; ++row)
@@ -76,7 +76,7 @@ public:
         // render light source (simply re-render sphere at light positions)
         // this looks a bit off as we use the same shader, but it'll make their positions obvious and 
         // keeps the codeprint small.
-        for (unsigned int i = 0; i < sizeof(lightPositions) / sizeof(lightPositions[0]); ++i)
+		for (unsigned int i = 0; i < sizeof(lightPositions) / sizeof(lightPositions[0]); ++i)
         {
             glm::vec3 newPos = lightPositions[i] + glm::vec3(sin(glfwGetTime() * 5.0) * 5.0, 0.0, 0.0);
             newPos = lightPositions[i];

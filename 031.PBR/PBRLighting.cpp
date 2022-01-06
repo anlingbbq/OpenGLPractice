@@ -196,4 +196,4 @@ private:
 	float spacing = 2.5;
 };
 
-DEBUG_MAIN(BPRLighting);
+//DEBUG_MAIN(BPRLighting);
