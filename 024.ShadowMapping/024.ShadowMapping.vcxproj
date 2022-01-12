@@ -123,6 +123,11 @@
   <ItemGroup>
     <None Include="..\Resources\Shader\debugQuad.fs" />
     <None Include="..\Resources\Shader\debugQuad.vs" />
+    <None Include="..\Resources\Shader\pointShadows.fs" />
+    <None Include="..\Resources\Shader\pointShadows.vs" />
+    <None Include="..\Resources\Shader\pointShadowsDepth.fs" />
+    <None Include="..\Resources\Shader\pointShadowsDepth.gs" />
+    <None Include="..\Resources\Shader\pointShadowsDepth.vs" />
     <None Include="..\Resources\Shader\shadowMappingDepth.fs" />
     <None Include="..\Resources\Shader\shadowMappingDepth.vs" />
   </ItemGroup>

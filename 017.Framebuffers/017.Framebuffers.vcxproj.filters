@@ -20,19 +20,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Libraries\Shader\kernel3x3.fs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Libraries\Shader\quad.fs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\Libraries\Shader\quad.vs">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\Libraries\Includes\Minor\Materials\Kernel3x3Material.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\Shader\inversion.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\kernel3x3.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\quad.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\quad.vs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -38,5 +38,20 @@
     <None Include="..\Resources\Shader\shadowMappingDepth.vs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\Resources\Shader\pointShadows.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\pointShadows.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\pointShadowsDepth.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\pointShadowsDepth.gs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\pointShadowsDepth.vs">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

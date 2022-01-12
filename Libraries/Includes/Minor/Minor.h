@@ -148,6 +148,8 @@ namespace minor
 			glfwSetWindowTitle(_window, title);
 		}
 
+		
+
 		virtual void onResize(int w, int h)
 		{
 			_info.width = w;

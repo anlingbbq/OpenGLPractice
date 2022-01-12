@@ -120,12 +120,13 @@
     <ClCompile Include="Framebuffers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Libraries\Shader\kernel3x3.fs" />
-    <None Include="..\Libraries\Shader\quad.fs" />
-    <None Include="..\Libraries\Shader\quad.vs" />
+    <ClInclude Include="..\Libraries\Includes\Minor\Materials\Kernel3x3Material.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Libraries\Includes\Minor\Materials\Kernel3x3Material.h" />
+    <None Include="..\Resources\Shader\inversion.fs" />
+    <None Include="..\Resources\Shader\kernel3x3.fs" />
+    <None Include="..\Resources\Shader\quad.fs" />
+    <None Include="..\Resources\Shader\quad.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

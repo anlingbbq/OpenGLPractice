@@ -211,4 +211,4 @@ private:
     unsigned int ao;
 };
 
-DEBUG_MAIN(PBRTexture);
+//DEBUG_MAIN(PBRTexture);

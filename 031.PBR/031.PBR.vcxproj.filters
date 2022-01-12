@@ -21,12 +21,45 @@
     <ClCompile Include="PBRTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IBL01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IBL02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Resources\Shader\PBR\1.1.pbr.fs">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\Resources\Shader\PBR\1.1.pbr.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\1.2.pbr.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\1.2.pbr.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.1.background.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.1.background.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.1.cubemap.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.1.equirectangular_to_cubemap.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.2.pbr.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.2.pbr.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.1.2.irradiance_convolution.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
