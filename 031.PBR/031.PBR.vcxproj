@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IBL01.cpp" />
-    <ClCompile Include="IBL02.cpp" />
-    <ClCompile Include="PBRLighting.cpp" />
-    <ClCompile Include="PBRTexture.cpp" />
+    <ClCompile Include="03.IrradianceConversion.cpp" />
+    <ClCompile Include="04.Irradiance.cpp" />
+    <ClCompile Include="01.Lighting.cpp" />
+    <ClCompile Include="02.LightingTexture.cpp" />
+    <ClCompile Include="05.Specular.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Resources\Shader\PBR\1.1.pbr.fs" />
@@ -36,6 +37,10 @@
     <None Include="..\Resources\Shader\PBR\2.1.2.irradiance_convolution.fs" />
     <None Include="..\Resources\Shader\PBR\2.1.2.pbr.fs" />
     <None Include="..\Resources\Shader\PBR\2.1.2.pbr.vs" />
+    <None Include="..\Resources\Shader\PBR\2.2.1.brdf.fs" />
+    <None Include="..\Resources\Shader\PBR\2.2.1.brdf.vs" />
+    <None Include="..\Resources\Shader\PBR\2.2.1.pbr.fs" />
+    <None Include="..\Resources\Shader\PBR\2.2.1.prefilter.fs" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

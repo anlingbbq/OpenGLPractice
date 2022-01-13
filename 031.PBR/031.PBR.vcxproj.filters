@@ -15,16 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PBRLighting.cpp">
+    <ClCompile Include="01.Lighting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PBRTexture.cpp">
+    <ClCompile Include="02.LightingTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IBL01.cpp">
+    <ClCompile Include="03.IrradianceConversion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IBL02.cpp">
+    <ClCompile Include="04.Irradiance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="05.Specular.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,6 +63,18 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="..\Resources\Shader\PBR\2.1.2.irradiance_convolution.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.2.1.brdf.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.2.1.brdf.vs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.2.1.pbr.fs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Resources\Shader\PBR\2.2.1.prefilter.fs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
