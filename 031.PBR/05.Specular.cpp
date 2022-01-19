@@ -311,7 +311,7 @@ public:
 		renderCube();
 
 		// render BRDF map to screen
-		//brdfShader.Use();
+		//_brdfShader->use();
 		//renderQuad();
 	}
 
