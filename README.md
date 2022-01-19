@@ -81,3 +81,7 @@
 * 点光源<br>
 ![](https://github.com/anlingbbq/OpenGLPractice/blob/master/Demonstrate/022.PointShadows.png)
 
+### 031.PBR
+* PBR<br>
+![](https://github.com/anlingbbq/OpenGLPractice/blob/master/Demonstrate/031.PBR.png)
+
